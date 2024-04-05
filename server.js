@@ -10,11 +10,11 @@ app.get('/', (req, res) =>
 {
 	const articles = [{
 		title: 'Test Article',
-		created: Date.now(),
+		created: new Date(),
 		description: 'Sigma Article'
 
 	}]
-	res.render('index', { articles: articles})
+	res.render('articles/index', { articles: articles})
 
 })
 app.listen(5000)

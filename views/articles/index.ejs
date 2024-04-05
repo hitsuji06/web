@@ -14,10 +14,15 @@
         <%articles.forEach(article => { %>
             <div class="card mt-4">
                 <div class="card-body">
-                <h4 class="card-title"><%= article.title %></h4>
-                <h5><%= article.created %></h5>
-                <h5><%= article.description %></h5>
+                    <h4 class="card-title"><%= article.title %></h4>
+                    <div class="card-subtitle text-muted mb-2">
+                        <%= article.created.toLocaleDateString() %>
+                    </div>
+                    <div class="card-subtitle mb-2">
+                        <%= article.description %>
+                    </div>
                 </div>
+
             </div>
         <%})%>
     </div>
